@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount', # allows users to log in with their social media
+    'allauth.socialaccount',# allows users to log in with their social media
     'home',
     'products',
     'bag',
