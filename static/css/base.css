@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: "Lato";
+    font-family: 'Lato';
 }
 
 /* from Bulma */
@@ -105,11 +105,9 @@ a.category-badge>span.badge:hover {
 
 input[name='q']::placeholder {
     color: #aab7c4;
-
 }
 
-
-/* bootstrap toasts  */
+/* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -126,6 +124,7 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
     height: 0;
@@ -176,7 +175,7 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* --------------------------------- Media queries */
+/* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -185,23 +184,22 @@ input[name='q']::placeholder {
     }
 }
 
-
-/* allauth formatting  */
+/* Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
+    /* mt-4 */
     color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
-
 }
 
-.allauth-form-inner-content label:not([for="id_remember"]) {
+.allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
-
 }
 
 .allauth-form-inner-content input::placeholder {
@@ -243,6 +241,35 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -258,7 +285,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile.  */
+/* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
